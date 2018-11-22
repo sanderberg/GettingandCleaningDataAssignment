@@ -1,4 +1,4 @@
-#Getting and Cleaning Data Course Assignment - Wearable Tech
+# Getting and Cleaning Data Course Assignment - Wearable Tech
 
 One of the most exciting areas in all of data science right now is wearable computing. 
 Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. 
@@ -11,7 +11,7 @@ This repository contains the following files:
   `run_analysis.R` - the R script that cleaned the raw data and created the tidy dataset
   `tidy_data.txt` - the cleaned data output
 
-#Generating the Tidy Dataset
+# Generating the Tidy Dataset
 
 The `run_analysis.R` script can be used to generate the tidy data. It undergoes the following operations:
   - gets and reads the wearable tech data
