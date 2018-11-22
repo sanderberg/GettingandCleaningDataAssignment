@@ -6,10 +6,10 @@ Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advan
 The data linked to in this assignment represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
 
 This repository contains the following files:
-  `README.md` - provides an overview of the dataset and the scripts, and how they are connected
-  `Codebook.md` - the codebook describes the data, variables, transformations and cleaning work that occurred on the data
-  `run_analysis.R` - the R script that cleaned the raw data and created the tidy dataset
-  `tidy_data.txt` - the cleaned data output
+ - `README.md` - provides an overview of the dataset and the scripts, and how they are connected
+ - `Codebook.md` - the codebook describes the data, variables, transformations and cleaning work that occurred on the data
+ - `run_analysis.R` - the R script that cleaned the raw data and created the tidy dataset
+ - `tidy_data.txt` - the cleaned data output
 
 ## Generating the Tidy Dataset
 
