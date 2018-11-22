@@ -1,5 +1,3 @@
-#####
-#
 # OVERVIEW
 #   Using data collected from the accelerometers from the Samsung Galaxy S 
 #   smartphone, work with the data and make a clean data set.
@@ -12,7 +10,6 @@ library(dplyr)
 
 ###########
 # Get data
-###########
 
 # download zip file containing data if it hasn't already been downloaded
 zipUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -31,7 +28,6 @@ if (!file.exists(dataPath)) {
 
 ############
 # Read data
-############
 
 # read training data
 trainingSubjects <- read.table(file.path(dataPath, "train", "subject_train.txt"))
@@ -55,7 +51,6 @@ colnames(activities) <- c("activityId", "activityLabel")
 
 #######################################################################
 # 1 - Merge the training and the test sets to create one data set
-#######################################################################
 
 # concatenate individual data tables to make single data table
 humanActivity <- rbind(
@@ -73,7 +68,6 @@ colnames(humanActivity) <- c("subject", features[, 2], "activity")
 
 ############################################################################################
 # 2 - Extract only the measurements on the mean and standard deviation for each measurement
-############################################################################################
 
 # determine columns of data set to keep based on column name...
 columnsToKeep <- grepl("subject|activity|mean|std", colnames(humanActivity))
@@ -84,16 +78,13 @@ humanActivity <- humanActivity[, columnsToKeep]
 
 ###########################################################################
 # 3 - Use descriptive activity names to name the activities in the dataset
-###########################################################################
 
 # replace activity values with named factor levels
 humanActivity$activity <- factor(humanActivity$activity, 
                                  levels = activities[, 1], labels = activities[, 2])
 
-
 ######################################################################
 # 4 - Appropriately label the dataset with descriptive variable names
-######################################################################
 
 # get column names
 humanActivityCols <- colnames(humanActivity)
@@ -120,7 +111,6 @@ colnames(humanActivity) <- humanActivityCols
 
 #################################################
 # 5 - Create a second, independent tidy dataset
-#################################################
 
 # group by subject and activity and summarise using mean
 humanActivityMeans <- humanActivity %>% 
