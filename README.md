@@ -11,7 +11,7 @@ This repository contains the following files:
   `run_analysis.R` - the R script that cleaned the raw data and created the tidy dataset
   `tidy_data.txt` - the cleaned data output
 
-# Generating the Tidy Dataset
+## Generating the Tidy Dataset
 
 The `run_analysis.R` script can be used to generate the tidy data. It undergoes the following operations:
   - gets and reads the wearable tech data
